@@ -49,6 +49,7 @@ Plateforme crée en Ruby on Rails avec postgresql
 - Définir un outil de seed vin: base de vivino, outil [Github](github.com:aptash/vivino-api.git)
   - Récupération de plusieurs types de vin en JSON
   - -> préparer un seed postgresql
+  - voir [python seed folder](/python_vivino_db_seed/)
 - Système d'alerting:
   - L'usage de la gem 'noticed' semble être indiquée autant pour du mail que du push notification
 - Modélisation de la base
