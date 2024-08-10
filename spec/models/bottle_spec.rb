@@ -91,4 +91,19 @@ RSpec.describe Bottle, :type => :model do
     subject.grape_variety = "Merlot"
     expect(subject).to be_valid
   end
+  
+  it "is not valid if nil sale_url" do
+    subject.sale_url = nil
+    expect(subject).to_not be_valid
+  end
+  
+  it "is not valid if wrong sale_url" do
+    subject.sale_url = "Merlot"
+    expect(subject).to_not be_valid
+  end
+  
+  it "is not valid if wrong thumb format" do
+    subject.sale_url = "Merlot"
+    expect(subject).to_not be_valid
+  end
 end
