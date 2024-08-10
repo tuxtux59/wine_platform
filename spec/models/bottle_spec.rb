@@ -8,6 +8,9 @@ RSpec.describe Bottle, :type => :model do
   it "is valid with valid attributes" do
     expect(subject).to be_valid
     expect(subject.name).to eq "Chateau Ste. Michelle Merlot"
+    expect(subject.thumb).to eq "Chateau Ste. Michelle Merlot"
+    expect(subject.grape_variety).to eq "Chateau Ste. Michelle Merlot"
+    expect(subject.vintage).to eq "Chateau Ste. Michelle Merlot"
   end
   
   it "uses default thumb if not given" do
