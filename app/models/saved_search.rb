@@ -1,3 +1,4 @@
+# Class that represent a user search for wine bottles
 class SavedSearch < ApplicationRecord
   belongs_to :user
 
