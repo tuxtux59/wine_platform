@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 17.09
+  recorded_at: 2024-08-10 11:41:09
+  bottle: one
+
+two:
+  price: 21.83
+  recorded_at: 2024-08-10 11:41:09
+  bottle: two
