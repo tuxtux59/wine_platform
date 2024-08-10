@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: awesomeExpert1
+  email: expert@one.com
+  encrypted_password: MyString
+
+two:
+  username: awesomeExpert2
+  email: expert@tw.com
+  encrypted_password: MyString

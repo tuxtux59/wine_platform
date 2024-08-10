@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bottle: one
+  expert: one
+  score: 3.8
+  details: MyText
+
+two:
+  bottle: two
+  expert: two
+  score: 4
+  details: MyText
