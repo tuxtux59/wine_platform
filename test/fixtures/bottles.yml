@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Chateau Ste. Michelle Merlot
+  grape_variety: Merlot
+  vintage: "2019"
+  sale_url: https://www.vivino.com/US-CA/fr/wines/1988261
+  thumb: https://images.vivino.com/thumbs/XpXhtt4KQYG5aAYU4yvfuw_pb_300x300.png
+
+two:
+  name: Les Jamelles Malbec
+  grape_variety: Malbec
+  vintage: "2018"
+  sale_url: https://www.vivino.com/wines/4213435
+  thumb: https://images.vivino.com/thumbs/8p9A_FO6RR-KE44gtmdkTA_pl_375x500.png
