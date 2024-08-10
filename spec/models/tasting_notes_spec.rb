@@ -23,4 +23,19 @@ RSpec.describe Expert, :type => :model do
     subject.score = nil
     expect(subject).to_not be_valid
   end
+  
+  it "is not valid with zero score" do
+    subject.score = 0
+    expect(subject).to_not be_valid
+  end
+  
+  it "is not valid with score greater than 5" do
+    subject.score = 5.01
+    expect(subject).to_not be_valid
+  end
+  
+  it "is valid with score of 5" do
+    subject.score = 5
+    expect(subject).to be_valid
+  end
 end

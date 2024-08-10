@@ -4,5 +4,5 @@ class TastingNote < ApplicationRecord
 
   validates_presence_of :bottle
   validates_presence_of :expert
-  validates_presence_of :score
+  validates :score, presence: true, numericality: {greater_than: 0, less_than_or_equal_to: 5}
 end

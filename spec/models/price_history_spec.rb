@@ -20,4 +20,19 @@ RSpec.describe Expert, :type => :model do
     subject.recorded_at = nil
     expect(subject).to_not be_valid
   end
+
+  it "is not valid if price is null" do
+    subject.price = 0
+    expect(subject).to_not be_valid
+  end
+  
+  it "is not valid if price is negative" do
+    subject.price = -1
+    expect(subject).to_not be_valid
+  end
+  
+  it "is not valid if price is just above zero" do
+    subject.price = 0.01
+    expect(subject).to be_valid
+  end
 end
