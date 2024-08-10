@@ -6,6 +6,6 @@ one:
   encrypted_password: MyString
 
 two:
-  username: jane
+  username: jane01
   email: jane@doe.com
   encrypted_password: MyString

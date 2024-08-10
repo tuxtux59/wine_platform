@@ -14,8 +14,18 @@ RSpec.describe Expert, :type => :model do
     expect(subject).to_not be_valid
   end
   
+  it "is not valid with short username" do
+    subject.username = 'jane'
+    expect(subject).to_not be_valid
+  end
+  
   it "is not valid without email" do
     subject.email = nil
+    expect(subject).to_not be_valid
+  end
+  
+  it "is not valid without proper" do
+    subject.email = 'nil'
     expect(subject).to_not be_valid
   end
 end
