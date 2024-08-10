@@ -61,4 +61,34 @@ RSpec.describe Bottle, :type => :model do
     TastingNote.new(bottle: subject, expert: expert, score: 5).save!
     expect(subject.reload.average_score).to eq 4.4
   end
+
+  it "is not valid if too short name" do
+    subject.name = "wrong"
+    expect(subject).to_not be_valid
+  end
+  
+  it "is not valid if just below 10 char name" do
+    subject.name = "azertyuio"
+    expect(subject).to_not be_valid
+  end
+  
+  it "is valid if just 10 char name" do
+    subject.name = "azertyuiop"
+    expect(subject).to be_valid
+  end
+
+  it "is not valid if too short grape_variety" do
+    subject.grape_variety = "bad"
+    expect(subject).to_not be_valid
+  end
+  
+  it "is not valid if just below 10 char grape_variety" do
+    subject.grape_variety = "azer"
+    expect(subject).to_not be_valid
+  end
+  
+  it "is valid if just 5 char grape_variety" do
+    subject.grape_variety = "Merlot"
+    expect(subject).to be_valid
+  end
 end
