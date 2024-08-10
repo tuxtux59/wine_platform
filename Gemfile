@@ -55,6 +55,7 @@ group :development do
   gem "web-console"
   gem "pre-commit", require: false
   gem "rubocop", require: false
+  gem "brakeman", require: false
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
