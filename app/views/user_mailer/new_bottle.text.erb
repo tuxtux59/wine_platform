@@ -1,0 +1,12 @@
+Good news <%= @user.username %>
+================================================
+
+There is a new wine bottle (<%= @bottle.name %>) that comply with one of your research
+
+<% @search.search_params.map do |k,v| %>
+  - <%= k %>: <%= v %>
+<% end %>
+
+To login to the site, just follow this link: <%= @url %>
+
+Thanks for joining and have a great day!

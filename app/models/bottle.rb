@@ -1,5 +1,7 @@
 # Class representing wine bottle
 class Bottle < ApplicationRecord
+  after_create :notify_users
+
   has_many :tasting_notes
   has_many :price_histories
 
@@ -17,5 +19,16 @@ class Bottle < ApplicationRecord
   def latest_price
     latest_history = price_histories.order(recorded_at: :desc).first
     latest_history&.price
+  end
+
+  private
+
+  def notify_users
+    # TODO: handle noticed gem
+    SavedSearch
+      .for_grape_variety(grape_variety)
+      .find_each do |search|
+        BottleNotifier.with(record: self, search:).deliver(search.user)
+      end
   end
 end
