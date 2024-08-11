@@ -2,6 +2,7 @@
   - [Source](#source)
   - [Highlights](#highlights)
 - [Integration](#integration)
+  - [Notifications](#notifications)
 
 
 ## PITCH
@@ -55,3 +56,9 @@ Plateforme crée en Ruby on Rails avec postgresql
 - Modélisation de la base
   - ![object diagram](object_diagram.png)
   - Priorisation de l'usage de l'UUID pour la sécurité
+
+
+### Notifications
+
+Email can be viewed [Here](http://localhost:3000/rails/mailers/user_mailer/send_new_bottle_email)
+
