@@ -4,7 +4,14 @@ class UserMailer < ApplicationMailer
 
   default from: 'contact@wine_platform.com'
 
-  def new_bottle(bottle, search)
+  # def new_bottle(bottle, search)
+  def new_bottle
+    search = SavedSearch.all.sample
+    bottle = Bottle.where(grape_variety: search.search_params['grape_variety']).sample
+    deliver_new_bottle(bottle, search)
+  end
+
+  def deliver_new_bottle(bottle, search)
     @bottle = bottle
     print("search:\n #{search}\n")
     @search = search
