@@ -71,3 +71,5 @@ group :test do
 end
 
 gem "noticed", "~> 2.4"
+
+gem "tailwindcss-rails", "~> 2.7"

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :bottles
   namespace :api do
     resources :tasting_notes
     resources :bottles
