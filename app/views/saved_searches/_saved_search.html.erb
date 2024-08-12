@@ -1,0 +1,19 @@
+<div id="<%= dom_id saved_search %>" class="my-4">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">User:</strong>
+    @<%= saved_search.user.username %>
+  </p>
+
+  <p class="my-5">
+    <h3 class="block font-bold mb-1">Search params:</h3>
+    <ul>
+      <% saved_search.search_params.each do |key, value| %>
+        <li>
+          <strong><%= key %></strong>
+          <%= key %>
+        </li>
+      <% end %>
+    </ul>
+  </p>
+
+</div>
