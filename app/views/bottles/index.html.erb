@@ -1,0 +1,37 @@
+<p style="color: green"><%= notice %></p>
+
+<!-- Top Bar -->
+<div class="relative bg-teal-50 p-4 shadow-md">
+    <div class="flex justify-between items-right max-w-4xl mx-auto">
+        <h1 class="text-2xl font-semibold">Wine Platform</h1>
+    </div>
+    <%= link_to("+", new_bottle_path, class: "absolute right-12 transform translate-y-1/2 w-12 h-12 bg-blue-50 border border-blue-100 hover:bg-blue-500 hover:border-blue-500 hover:text-white rounded-full flex items-center justify-center text-xl font-bold bottom-0") %>
+</div>
+<!-- Wine List -->
+<div class="space-y-4 pt-12">
+    <em class="mx-auto w-1/5 block"><%= @bottles.count %> Bottles</em>
+    <% @bottles.each do |bottle| %>
+      <%= link_to(bottle, class: "flex items-center bg-white hover:bg-purple-100 p-4 shadow-md rounded-md w-2/3 mx-auto") do %>
+        <div class="w-16 h-16 bg-gray-50 hover:bg-gray-200 hover:border-gray-500 flex-shrink-0">
+          <img src="<%= bottle.thumb %>" class="object-contain h-16 w-16" alt="<%= bottle.name %>"/>
+        </div>
+        <div class="ml-4 flex-grow">
+            <div class="text-lg font-bold">
+              <%= bottle.name %>
+            </div>
+            <div class="text-md font-semibold">
+              <%= bottle.grape_variety %>
+            </div>
+            <div class="text-gray-600">
+            <%= bottle.latest_price || '-' %>
+            €</div>
+        </div>
+        <div class="text-center">
+            <div class="text-2xl font-bold">
+              <%= bottle.average_score&.truncate(2) %>
+            </div>
+            <div class="text-yellow-500">★</div>
+        </div>
+      <% end %>
+    <% end %>
+</div>

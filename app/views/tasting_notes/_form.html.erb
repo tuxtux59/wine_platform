@@ -1,0 +1,37 @@
+<%= form_with(model: tasting_note, class: "contents") do |form| %>
+  <% if tasting_note.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(tasting_note.errors.count, "error") %> prohibited this tasting_note from being saved:</h2>
+
+      <ul>
+        <% tasting_note.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-5">
+    <%= form.label :score %>
+    <%= form.number_field :score, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full", step: "0.1" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :details %>
+    <%= form.text_area :details, rows: 4, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :bottle_id %>
+    <%= form.select(:bottle_id, options_for_select(Bottle.all.map{|b| [b.name, b.id]}), {}, {class: "block bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", disabled: action_name != 'new'}) %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :expert_id %>
+    <%= form.select(:expert_id, options_for_select(Expert.all.map{|e| [e.username, e.id]}), {}, {class: "block bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", disabled: action_name != 'new'}) %>
+  </div>
+
+  <div class="inline">
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>
