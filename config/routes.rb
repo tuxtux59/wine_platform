@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :bottles
+  resources :tasting_notes, except: [:index]
+  
   namespace :api do
     resources :tasting_notes
     resources :bottles

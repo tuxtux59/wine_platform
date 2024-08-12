@@ -2636,7 +2636,7 @@ Metrics/BlockLength:
     - 'spec/models/*'
     - 'spec/requests/**/*'
     - 'config/environments/*'
-    - 'spec/routing/bottles_routing_spec.rb'
+    - 'spec/routing/*'
     - 'spec/views/bottles/index.html.erb_spec.rb'
 
 Metrics/BlockNesting:

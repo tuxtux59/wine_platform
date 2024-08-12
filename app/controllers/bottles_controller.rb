@@ -4,7 +4,7 @@ class BottlesController < ApplicationController
 
   # GET /bottles or /bottles.json
   def index
-    @bottles = Bottle.preload([:tasting_notes]).all
+    @bottles = Bottle.preload([:tasting_notes]).all.first(50)
   end
 
   # GET /bottles/1 or /bottles/1.json
