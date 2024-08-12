@@ -3,6 +3,7 @@
   - [Highlights](#highlights)
 - [Integration](#integration)
   - [Notifications](#notifications)
+- [TODO Next](#todo-next)
 
 
 ## PITCH
@@ -62,3 +63,10 @@ Plateforme crée en Ruby on Rails avec postgresql
 
 Email can be viewed [Here](http://localhost:3000/rails/mailers/user_mailer/send_new_bottle_email)
 
+
+## TODO Next
+
+- Improve code with refacto and security tests
+- Complete authentication
+- Improve DB constrants (unicity etc)
+- Improve search discovery
